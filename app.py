@@ -23,3 +23,12 @@ from apis.auth import auth
 
 # Blueprint Registrations
 app.register_blueprint(auth, url_prefix='/auth')
+
+# Application Status Check
+@app.route('/status', methods=['GET'])
+def statusCheck():
+	return make_response(
+		'Site is Active',
+		200,
+		{'WWW-Authenticate': 'Basic Realm="Service Nominal"'}
+	)

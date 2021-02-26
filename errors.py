@@ -1,15 +1,6 @@
 from flask import make_response
 from app import app
 
-# Status Check Route
-@app.route('/status', methods=['GET'])
-def statusCheck():
-	return make_response(
-		'Site is Active',
-		200,
-		{'WWW-Authenticate': 'Basic Realm="Service Nominal"'}
-	)
-
 # Bad Request
 @app.errorhandler(400)
 def page_not_found(e):

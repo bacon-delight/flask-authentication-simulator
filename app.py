@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, make_response
 from flask_cors import CORS
 
 
@@ -20,9 +20,13 @@ import errors
 
 # Blueprint Imports
 from apis.auth import auth
+from apis.todos import todos
+from apis.posts import posts
 
 # Blueprint Registrations
 app.register_blueprint(auth, url_prefix='/auth')
+app.register_blueprint(todos, url_prefix='/todos')
+app.register_blueprint(posts, url_prefix='/posts')
 
 # Application Status Check
 @app.route('/status', methods=['GET'])

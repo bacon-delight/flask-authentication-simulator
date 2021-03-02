@@ -20,7 +20,7 @@ Data Sourced from [{JSON}Placeholder](https://jsonplaceholder.typicode.com/)
 - Posts
 
 #### Resources
-- [Postman Collection](https://www.getpostman.com/collections/b9de29a0a046ce29d82c)
+- [![Postman Collection](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/b9de29a0a046ce29d82c)
 - API Documentation - Coming Soon
 
 

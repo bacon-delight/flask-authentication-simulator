@@ -1,5 +1,5 @@
 # Flask APIs
-This repository contains a set of APIs used by multiple UI projects to demonstrate basic API usage. While this repository has a limited number of routes at present, I'm occasionally working on expanding the scope of it.
+This repository contains a set of APIs used by multiple UI projects to demonstrate basic API usage. This is basically a sort of broker for the JSONPlaceholder APIs, adding a layer of authentication to them. While this repository has a limited number of routes at present, I'm occasionally working on expanding the scope of it.
 
 Application Root Deployed at https://bacon-delight-demo-flask-apis.herokuapp.com/
 
@@ -13,14 +13,14 @@ Data Sourced from [{JSON}Placeholder](https://jsonplaceholder.typicode.com/)
 - Basic Authentication
 - Access & Refresh Token Generation
 - Refreshing Access Tokens
-- Params Support is coming soon
+- Params Support - coming soon
 
 #### Examples
-- Todos
-- Posts
+- [Todos](https://jsonplaceholder.typicode.com/todos)
+- [Posts](https://jsonplaceholder.typicode.com/posts)
 
 #### Resources
-- [![Postman Collection](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/b9de29a0a046ce29d82c)
+- [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/b9de29a0a046ce29d82c)
 - API Documentation - Coming Soon
 
 

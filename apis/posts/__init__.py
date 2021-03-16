@@ -33,3 +33,9 @@ def addPost():
 def updatePost(post_id):
 	response = requests.put("https://jsonplaceholder.typicode.com/posts/" + post_id, data = request.get_json())
 	return make_response(jsonify(response.json()))
+
+@posts.route('/<post_id>', methods=['DELETE'])
+@validateToken
+def deletePost(post_id):
+	response = requests.delete("https://jsonplaceholder.typicode.com/posts/" + post_id)
+	return make_response(jsonify(response.json()))

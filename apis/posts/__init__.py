@@ -31,10 +31,14 @@ def addPost():
 @posts.route('/<post_id>', methods=['PUT'])
 @validateToken
 def updatePost(post_id):
+	# JSONPlaceholder isn't accepting ID>100 for PUT Requests - This is a walkaround for simulating it
+	original_post_id = post_id
 	if(int(post_id)>100):
 		post_id = "100"
 	response = requests.put("https://jsonplaceholder.typicode.com/posts/" + post_id, data = request.get_json())
-	return make_response(jsonify(response.json()))
+	response = response.json()
+	response["id"] = int(original_post_id)
+	return make_response(jsonify(response))
 
 @posts.route('/<post_id>', methods=['DELETE'])
 @validateToken

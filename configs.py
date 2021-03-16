@@ -3,8 +3,7 @@ from os import urandom
 
 
 # Application Secret Key
-# app.config['SECRET_KEY'] = urandom(32)
-app.config['SECRET_KEY'] = 'secret'
+app.config['SECRET_KEY'] = urandom(32)
 
 # Login Credentials
 app.config['CREDENTIALS_USERNAME'] = 'admin'

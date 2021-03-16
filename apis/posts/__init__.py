@@ -31,6 +31,8 @@ def addPost():
 @posts.route('/<post_id>', methods=['PUT'])
 @validateToken
 def updatePost(post_id):
+	if(int(post_id)>100):
+		post_id = "100"
 	response = requests.put("https://jsonplaceholder.typicode.com/posts/" + post_id, data = request.get_json())
 	return make_response(jsonify(response.json()))
 

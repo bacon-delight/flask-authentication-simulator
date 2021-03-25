@@ -11,9 +11,11 @@ Data Sourced from [{JSON}Placeholder](https://jsonplaceholder.typicode.com/)
 -   GET
 -   POST
 -   PUT
+-   DELETE
 -   Basic Authentication
--   Access & Refresh Token Generation
--   Refreshing Access Tokens
+    -   Access & Refresh Token Generation
+    -   Refreshing Access Tokens
+-   Bearer Tokens
 -   Params Support - coming soon
 
 #### Examples

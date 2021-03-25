@@ -33,3 +33,9 @@ def addTodo():
 def updateTodo(todo_id):
 	response = requests.put("https://jsonplaceholder.typicode.com/todos/" + todo_id, data = request.get_json())
 	return make_response(jsonify(response.json()))
+
+@todos.route('/<todo_id>', methods=['DELETE'])
+@validateToken
+def deleteTodo(todo_id):
+	response = requests.delete("https://jsonplaceholder.typicode.com/todos/" + todo_id)
+	return make_response(jsonify(response.json()))
